@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wrench"
+dynamic = ["version"]
+description = "Graphical model inference and learning library"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.7.1",
+    "torchvision>=0.22.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.56.2",
+    "snorkel>=0.10.0",
+    "scikit-learn>=1.6.1",
+    "optuna>=4.5.0",
+    "pandas>=2.3.1",
+    "sentence-transformers>=5.1.1",
+    "cvxpy>=1.6.6",
+    "faiss-cpu>=1.12.0",
+    "numba>=0.61.2",
+    "scipy>=1.15.0",
+    "networkx>=3.4",
+    "spacy>=3.10",
+    "seqeval>=1.2.2",
+    "pillow>=11.1",
+    "nltk>=3.9",
+    "backpack-for-pytorch",
+    "higher",
+    "numbskull"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "wrench.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.uv.sources]
+numbskull = { git = "https://github.com/ByteDennis/numskull" } 
