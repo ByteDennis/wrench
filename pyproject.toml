@@ -32,7 +32,7 @@ dependencies = [
 ]
 
 [tool.setuptools.dynamic]
-version = {attr = "wrench.version.__version__"}
+version = {attr = "wrench.version.VERSION"}
 
 [tool.setuptools.packages.find]
 where = ["."]
